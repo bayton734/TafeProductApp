@@ -36,7 +36,8 @@ namespace ProductApps
                 cProduct.calTotalPayment();
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25);
-             }
+                wrapChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25 + 5);
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
