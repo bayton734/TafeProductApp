@@ -36,7 +36,9 @@ namespace ProductApps
                 cProduct.calTotalPayment();
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25);
-             }
+                var GST = (Int32)(cProduct.TotalPayment + 25 + 5) * 1.1;
+                GSTTextBlock.Text = Convert.ToString(GST);
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
